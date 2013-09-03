@@ -1,0 +1,31 @@
+#ifndef	__MORPION_HH__
+#define	__MORPION_HH__
+
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <vector>
+#include "Sprite.hh"
+
+class	Morpion
+{
+public:
+  Morpion(int x_ = 3, int y_ = 3, int xWin = 800, int yWin = 800);
+  ~Morpion();
+
+  void
+  void	run();
+private:
+  int	_x;
+  int	_y;
+  int	_xWin;
+  int	_yWin;
+
+  sf::RenderWindow			_window;
+
+  std::vector<std::vector<bool> >	_gride;
+
+  Sprite				_sprite;
+};
+
+#endif
